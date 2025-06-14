@@ -56,7 +56,6 @@ const HypothyroidApp = () => {
   };
 
   const isMobile = window.innerWidth <= 768;
-  
   if (isMobile) {
     containerStyle.padding = "16px";
     headingStyle.fontSize = "1.3rem";
@@ -89,7 +88,6 @@ const HypothyroidApp = () => {
           left: 0,
           width: "100vw",
           justifyContent: "center",
-          boxShadow: "none",
           zIndex: 100
         }}
       >
@@ -116,14 +114,14 @@ const HypothyroidApp = () => {
           </svg>
         </button>
         <span style={{ width: "100%", textAlign: "center" }}>
-          Patient Education - Hypothyroid Information
+          Patient Education - Hypothyroidism
         </span>
       </div>
 
       <div
         style={{
           ...containerStyle,
-          paddingTop: isMobile ? "3.2rem" : "4.2rem" 
+          paddingTop: isMobile ? "3.2rem" : "4.2rem"
         }}
       >
         <img 
@@ -139,30 +137,31 @@ const HypothyroidApp = () => {
         />
 
         <div style={sectionStyle}>
-          <h2 style={headingStyle}>What is the Thyroid?</h2>
+          <h2 style={headingStyle}>What is Thyroid?</h2>
           <p style={paragraphStyle}>
-            The thyroid is a gland at the front of your neck. It produces hormones which control your metabolism, energy level, and development. It plays a key role in the functioning of nearly every organ system in your body.
-          </p>
-        </div>
-        <div style={sectionStyle}>
-          <h2 style={headingStyle}>What is Hypothyroidism?</h2>
-          <p style={paragraphStyle}>
-            Hypothyroidism is a condition in which your thyroid gland doesn't produce enough thyroid hormones. This condition can slow down your metabolism and cause symptoms like fatigue, weight gain, dry skin, and depression.
+            The thyroid is a gland located at the front of your neck. It produces chemical substances called hormones that travel through the bloodstream and control how your body uses energy. In other words, it regulates your metabolism, growth, and development from an early stage. The hormones produced by the thyroid are mainly thyroxine (T4) and triiodothyronine (T3).
           </p>
         </div>
 
         <div style={sectionStyle}>
-          <h2 style={headingStyle}>Symptoms</h2>
+          <h2 style={headingStyle}>What is Hypothyroidism?</h2>
+          <p style={paragraphStyle}>
+            Hypothyroidism is a condition where your thyroid gland does not produce enough thyroid hormones (T4 and T3) to meet your body's needs. Hypothyroidism affects all the organs in the body because thyroid hormones are essential for the normal functioning of every cell in the body.
+          </p>
+        </div>
+
+        <div style={sectionStyle}>
+          <h2 style={headingStyle}>Symptoms of Hypothyroidism</h2>
           <ul style={listStyle}>
             {[
               "Fatigue",
-              "Weight gain", 
-              "Dry skin",
-              "Constipation",
-              "Feeling depressed",
-              "Cold intolerance",
-              "Thinning hair",
-              "Slow heart rate"
+              "Hoarseness",
+              "Weight gain",
+              "Muscle weakness",
+              "Numbness in hands",
+              "Brain fog",
+              "Depression",
+              "Anxiety"
             ].map((symptom, index) => (
               <li key={index} style={listItemStyle}>
                 <span style={bulletStyle}>•</span>
@@ -173,20 +172,47 @@ const HypothyroidApp = () => {
         </div>
 
         <div style={sectionStyle}>
-          <h2 style={headingStyle}>Treatment and Management</h2>
-          <p style={paragraphStyle}>
-            Hypothyroidism is treated with thyroid hormone replacement therapy. Always take medications as prescribed and go for regular follow-ups. Lifestyle changes like eating iodine-rich food and staying active can help in managing the condition.
-          </p>
+          <h2 style={headingStyle}>Why Women?</h2>
+          <ul style={listStyle}>
+            {[
+              "At young age",
+              "During or after pregnancy",
+              "After menopause",
+              "With autoimmune diseases (like Hashimoto's thyroiditis)"
+            ].map((reason, index) => (
+              <li key={index} style={listItemStyle}>
+                <span style={bulletStyle}>•</span>
+                {reason}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div style={sectionStyle}>
-          <h2 style={headingStyle}>Tips</h2>
+          <h2 style={headingStyle}>Diagnosis</h2>
           <ul style={listStyle}>
             {[
-              "Take medications at the same time daily",
-              "Do not stop treatment without consulting a doctor",
-              "Eat iodine-rich foods like dairy, eggs, and seafood",
-              "Avoid self-medication or herbal substitutes"
+              "TSH test - high levels",
+              "T4 test - low levels",
+              "T3 test - low levels",
+              "Thyroid antibody test – may be positive in autoimmune thyroiditis"
+            ].map((test, index) => (
+              <li key={index} style={listItemStyle}>
+                <span style={bulletStyle}>•</span>
+                {test}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div style={sectionStyle}>
+          <h2 style={headingStyle}>How to Increase Thyroid Hormone Levels?</h2>
+          <ul style={listStyle}>
+            {[
+              "Thyroxine supplement as a replacement for the T4 hormone.",
+              "Avoid smoking, as it affects the thyroid.",
+              "Avoid taking other medications at the same time as thyroxine, as this may interfere with its absorption.",
+              "You may need to adjust or reschedule your other medications as per your doctor’s advice."
             ].map((tip, index) => (
               <li key={index} style={listItemStyle}>
                 <span style={bulletStyle}>•</span>
